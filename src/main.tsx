@@ -1,10 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { HomePage } from './pages/HomePage/HomePage'
+import { Paths } from './constants/Paths'
+
+const router = createBrowserRouter([
+  {
+    path: Paths.HOME,
+    element: <HomePage />,
+  },
+  {
+    path: Paths.ABOUT,
+    element: <h1>About</h1>,
+  },
+  {
+    path: Paths.CONTACTS,
+    element: <h1>Contact</h1>,
+  },
+  {
+    path: Paths.NOTFOUND,
+    element: <h1>404</h1>,
+  },
+])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
