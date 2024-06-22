@@ -1,0 +1,23 @@
+// _mixins.scss
+@mixin icon-link($size, $color) {
+  font-size: $size;
+  color: $color;
+
+  @if $size == 'sm' {
+    font-size: $icon-size-small;
+  } @else if $size == 'md' {
+    font-size: $icon-size-medium;
+  } @else if $size == 'xl' {
+    font-size: $icon-size-large;
+  }
+
+  @if $color == 'dark' {
+    color: $icon-color-dark;
+  } @else if $color == 'light' {
+    color: $icon-color-light;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

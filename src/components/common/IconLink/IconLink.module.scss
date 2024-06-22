@@ -1,0 +1,29 @@
+@import '../../../styles/global.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.icon {
+  display: inline-block;
+  transition: $transition;
+
+  &--sm {
+    @include icon-link('sm', 'dark');
+  }
+
+  &--md {
+    @include icon-link('md', 'dark');
+  }
+
+  &--xl {
+    @include icon-link('xl', 'dark');
+  }
+
+  &--dark {
+    @include icon-link('m', 'dark');
+  }
+
+  &--light {
+    @include icon-link('m', 'light');
+  }
+
+}
