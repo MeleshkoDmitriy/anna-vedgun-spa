@@ -1,7 +1,12 @@
+import { Layout } from '../../components/layout/Layout/Layout'
 import styles from './HomePage.module.scss'
 
 export const HomePage = () => {
   return (
-    <div className={styles.wrapper}>HomePage</div>
+    <Layout>
+      <section>
+        home
+      </section>
+    </Layout>
   )
 }
