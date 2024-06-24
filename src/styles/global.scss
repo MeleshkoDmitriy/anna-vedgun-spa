@@ -3,16 +3,16 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $padding-large;
+  padding: 0 $spacing-large;
 
   @media (max-width: 768px) {
     max-width: 768px;
-    padding: 0 $padding-medium;
+    padding: 0 $spacing-medium;
   }
 
   @media (max-width: 480px) {
     max-width: 480px;
-    padding: 0 $padding-small;
+    padding: 0 $spacing-small;
   }
 }
 
