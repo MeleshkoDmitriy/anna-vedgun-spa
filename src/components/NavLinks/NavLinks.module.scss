@@ -1,0 +1,49 @@
+
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.burgerButton {
+    display: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 7px 10px;
+
+    .burgerIcon {
+        position: relative;
+        top: 3px;
+    }
+}
+
+@media (max-width: 920px) {
+    .nav {
+        display: none;
+    }
+
+    .burgerButton {
+        display: block;
+    }
+
+    .navMobile {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 50%;
+        height: calc(100dvh - 67px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .burgerButton {
+        padding: 5px 10px;
+    }
+}

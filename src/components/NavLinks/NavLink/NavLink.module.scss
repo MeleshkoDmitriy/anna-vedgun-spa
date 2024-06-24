@@ -1,0 +1,20 @@
+@import "../../../styles/variables.scss";
+
+
+.link {
+    color: black;
+    height: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: white;
+}
+
+
+
+.active {
+    color: white;
+    background-color: black;
+}
