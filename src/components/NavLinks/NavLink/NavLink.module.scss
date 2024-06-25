@@ -1,20 +1,27 @@
 @import "../../../styles/variables.scss";
 
-
 .link {
-    color: black;
+    color: $color-text-primary;
     height: 30px;
-    padding: 20px;
+    padding: $spacing-medium;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    background-color: white;
+    background-color: #fff;
+    border-radius: $border-radius-medium;
+    transition: $transition;
+
+    &:hover {
+        background-color: $color-accent-secondary;
+    }
 }
 
-
-
 .active {
-    color: white;
-    background-color: black;
+    color: $color-text-secondary;
+    background-color: $color-accent-primary;
+
+    &:hover {
+        background-color: $color-bg-secondary;
+    }
 }
