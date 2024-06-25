@@ -12,14 +12,24 @@ interface IconLinkProps {
   iconColor: IconColor;
 }
 
-export const IconLink: FC<IconLinkProps> = ({ icon, link, iconSize, iconColor }) => {
+export const IconLink: FC<IconLinkProps> = ({
+  icon,
+  link,
+  iconSize,
+  iconColor,
+}) => {
   const iconClasses = clsx(styles.icon, {
     [styles[`icon--${iconSize}`]]: iconSize,
     [styles[`icon--${iconColor}`]]: iconColor,
   });
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className={iconClasses}>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={iconClasses}
+    >
       {icon}
     </a>
   );
