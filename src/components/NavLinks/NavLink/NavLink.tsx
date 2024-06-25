@@ -1,8 +1,8 @@
-import { FC } from "react";
-import styles from "./NavLink.module.scss";
-import { TLink } from "../../../types/types";
-import { Link, useLocation } from "react-router-dom";
-import clsx from "clsx";
+import { FC } from 'react';
+import styles from './NavLink.module.scss';
+import { TLink } from '../../../types/types';
+import { Link, useLocation } from 'react-router-dom';
+import clsx from 'clsx';
 
 interface LinkProps {
   link: TLink;
@@ -19,12 +19,7 @@ export const NavLink: FC<LinkProps> = ({ link, onClick }: LinkProps) => {
   });
 
   return (
-    <Link
-      to={path}
-      key={link.title}
-      onClick={onClick}
-      className={linkClasses}
-    >
+    <Link to={path} key={link.title} onClick={onClick} className={linkClasses}>
       {title}
     </Link>
   );

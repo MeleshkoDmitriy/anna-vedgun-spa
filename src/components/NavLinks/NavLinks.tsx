@@ -1,9 +1,9 @@
-import styles from "./NavLinks.module.scss";
-import { TbMenu2 } from "react-icons/tb";
-import { CgClose } from "react-icons/cg";
-import { useState } from "react";
-import { Links } from "../../constants/Contacts";
-import { NavLink } from "./NavLink/NavLink";
+import styles from './NavLinks.module.scss';
+import { TbMenu2 } from 'react-icons/tb';
+import { CgClose } from 'react-icons/cg';
+import { useState } from 'react';
+import { Links } from '../../constants/Contacts';
+import { NavLink } from './NavLink/NavLink';
 
 export const NavLinks = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,12 +14,10 @@ export const NavLinks = () => {
 
   return (
     <div className={styles.container}>
-
-
       <nav className={styles.nav}>
-          {Links.map((link) => {
-            return <NavLink link={link} key={link.title} />;
-          })}
+        {Links.map((link) => {
+          return <NavLink link={link} key={link.title} />;
+        })}
       </nav>
 
       <button
