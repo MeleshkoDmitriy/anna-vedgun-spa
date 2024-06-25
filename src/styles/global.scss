@@ -16,3 +16,40 @@
   }
 }
 
+/* ::placeholder {
+  font-family: sans-serif;
+} */
+
+::-webkit-scrollbar {
+  width: 10px;
+  transition: $transition;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-accent-primary;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-text-primary;
+}
+
+::-moz-scrollbar {
+  width: 10px;
+  transition: $transition;
+}
+
+::-moz-scrollbar-track {
+  background: $color-bg-primary;
+}
+
+::-moz-scrollbar-thumb {
+  background: $color-accent-primary;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: $color-text-primary;
+}
