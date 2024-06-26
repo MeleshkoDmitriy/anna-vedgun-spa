@@ -15,7 +15,7 @@ export const PostsList: FC<PostsListProps> = ({
   isError,
 }) => {
   return (
-    <section>
+    <section className={styles.wrapper}>
       {isLoading && <h2>Loading..</h2>}
       {posts.length &&
         posts?.map((post: TPost) => <Post key={post.id} {...post} />)}

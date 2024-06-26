@@ -3,7 +3,7 @@ import { TbMenu2 } from 'react-icons/tb';
 import { CgClose } from 'react-icons/cg';
 import { useState } from 'react';
 import { Links } from '../../constants/Contacts';
-import { NavLink } from './NavLink/NavLink';
+import { AppNavLink } from './NavLink/AppNavLink';
 
 export const NavLinks = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export const NavLinks = () => {
     <div className={styles.container}>
       <nav className={styles.nav}>
         {Links.map((link) => {
-          return <NavLink link={link} key={link.title} />;
+          return <AppNavLink link={link} key={link.title} />;
         })}
       </nav>
 
@@ -34,7 +34,11 @@ export const NavLinks = () => {
         <nav className={styles.navMobile}>
           {Links.map((link) => {
             return (
-              <NavLink link={link} key={link.title} onClick={handleCloseMenu} />
+              <AppNavLink
+                key={link.title}
+                link={link}
+                onClick={handleCloseMenu}
+              />
             );
           })}
         </nav>
