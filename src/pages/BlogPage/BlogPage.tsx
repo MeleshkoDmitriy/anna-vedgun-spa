@@ -22,11 +22,3 @@ export const BlogPage = () => {
     </Layout>
   );
 };
-
-// {isLoading && <h2>Loading..</h2>}
-// {data?.map((post: TPost) => (
-//   <div>
-//     <h2>{post.title}</h2>
-//     <p>{post.text}</p>
-//   </div>
-// ))}

@@ -1,27 +1,28 @@
-@import "../../../styles/variables.scss";
+@import '../../../styles/variables.scss';
 
 .link {
-    color: $color-text-primary;
-    height: 30px;
-    padding: $spacing-medium;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    background-color: #fff;
-    border-radius: $border-radius-medium;
-    transition: $transition;
+  color: $color-text-primary;
+  height: 30px;
+  padding: $spacing-medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background-color: #fff;
+  border-radius: $border-radius-medium;
+  transition: $transition;
 
-    &:hover {
-        background-color: $color-accent-secondary;
-    }
+  &:hover {
+    background-color: $color-accent-secondary;
+  }
 }
 
 .active {
-    color: $color-text-secondary;
-    background-color: $color-accent-primary;
+  color: $color-text-primary;
+  background-color: $color-accent-primary;
 
-    &:hover {
-        background-color: $color-bg-secondary;
-    }
+  &:hover {
+    color: $color-bg-primary;
+    background-color: $color-bg-secondary;
+  }
 }

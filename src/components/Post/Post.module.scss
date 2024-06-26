@@ -3,8 +3,8 @@
 .wrapper {
   width: 100%;
   padding: $spacing-medium;
-  color: $color-bg-primary;
-  background-color: $color-accent-primary;
+  color: $color-text-primary;
+  background-color: #fff;
   border-radius: $border-radius-medium;
 
   display: flex;
@@ -21,26 +21,54 @@
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    background-color: $color-accent-primary;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-accent-secondary;
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      filter: drop-shadow(3px 3px 2px $color-bg-primary);
     }
   }
 
-  h3 {
+  .title {
     margin-left: $spacing-small;
   }
 
-  span {
+  .date {
     margin-left: auto;
+    color: $color-accent-primary;
   }
 }
 
-.footer {
+// .content { 
+//   text-align: justify;
+// }
 
-  span {
-    margin-left: $spacing-small;
+.footer {
+  .link {
+    transition: $transition;
+    color: $color-accent-primary;
+    font-size: 18px;
+
+    &:hover {
+      color: $color-accent-primary-dark;
+    }
+
+    .icon {
+      position: relative;
+      top: 3px;
+    }
+
+    span {
+      margin-left: 3px;
+    }
   }
+
+
 }
