@@ -4,7 +4,7 @@ import image from '../../assets/images/user/avatar.png';
 
 export const Greeting = () => {
   return (
-    <section className="block">
+    <section className="blockWhite">
       <div className={styles.wrapper}>
         <div className={styles.image}>
           <img src={image} alt="Анна Ведьгун" title="Анна Ведьгун" />

@@ -16,13 +16,22 @@
   }
 }
 
-.block {
+.blockWhite {
   width: 100%;
   padding: $spacing-medium;
   color: $color-text-primary;
   background-color: #fff;
   border-radius: $border-radius-medium;
 }
+
+.blockGreen { 
+  width: 100%;
+  padding: $spacing-medium;
+  color: #fff;
+  background-color: $color-accent-primary;
+  border-radius: $border-radius-medium;
+}
+
 
 /* ::placeholder {
   font-family: sans-serif;

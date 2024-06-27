@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  gap: $spacing-medium;
+}
+
+.workWith,
+.notWorkWith {
+  flex: 1 1 50%;
+
+  h3 {
+    margin-bottom: $spacing-medium;
+  }
+}
