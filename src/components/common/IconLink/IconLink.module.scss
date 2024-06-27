@@ -3,11 +3,11 @@
 @import '../../../styles/mixins.scss';
 
 a {
-  color: $icon-color-black;
+  color: $icon-color-green;
   cursor: pointer;
 
   &:hover {
-    color: $icon-color-green;
+    color: $color-accent-primary-dark;
   }
 }
 

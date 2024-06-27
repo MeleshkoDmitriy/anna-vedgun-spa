@@ -10,25 +10,27 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <IconLink
-          link={Contacts.TELEGRAM}
-          icon={<FaTelegramPlane />}
-          size="md"
-          text="Telegram"
-        />
-        <IconLink
-          link={Contacts.INSTAGRAM}
-          icon={<FaInstagram />}
-          size="md"
-          text="Instagram"
-        />
-        <IconLink
-          link={Contacts.B17}
-          icon={<MdLibraryBooks />}
-          size="md"
-          text="B17"
-        />
-        <IconLink icon={<FaPhone />} size="sm" text={Contacts.PHONE_NUMBER} />
+        <div className={styles.wrapper}>
+          <IconLink
+            link={Contacts.TELEGRAM}
+            icon={<FaTelegramPlane />}
+            size="md"
+            text="Telegram"
+          />
+          <IconLink
+            link={Contacts.INSTAGRAM}
+            icon={<FaInstagram />}
+            size="md"
+            text="Instagram"
+          />
+          <IconLink
+            link={Contacts.B17}
+            icon={<MdLibraryBooks />}
+            size="md"
+            text="B17"
+          />
+          <IconLink icon={<FaPhone />} size="sm" text={Contacts.PHONE_NUMBER} />
+        </div>
       </div>
     </footer>
   );

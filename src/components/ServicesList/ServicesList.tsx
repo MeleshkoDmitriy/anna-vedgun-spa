@@ -1,6 +1,7 @@
 import styles from './ServicesList.module.scss';
 import '../../styles/global.scss';
 import { notWorkingWith, workingWith } from '../../constants/Contacts';
+import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
 
 export const ServicesList = () => {
   return (
@@ -8,17 +9,23 @@ export const ServicesList = () => {
       <div className={styles.wrapper}>
         <div className={styles.workWith}>
           <h3>С какими запросами я работаю:</h3>
-          <ul>
+          <ul className={styles.list}>
             {workingWith.map((elem, i) => (
-              <li key={i}>{elem}</li>
+              <li key={i}>
+                <FaUserCheck className={styles.icon} />
+                <span className={styles.text}>{elem}</span>
+              </li>
             ))}
           </ul>
         </div>
         <div className={styles.notWorkWith}>
-          <h3>С чем я не работаю:</h3>
-          <ul>
+          <h3>С чем я НЕ работаю:</h3>
+          <ul className={styles.list}>
             {notWorkingWith.map((elem, i) => (
-              <li key={i}>{elem}</li>
+              <li key={i}>
+                <FaUserTimes className={styles.icon} />
+                <span className={styles.text}>{elem}</span>
+              </li>
             ))}
           </ul>
         </div>
