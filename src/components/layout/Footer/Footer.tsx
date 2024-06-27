@@ -2,7 +2,7 @@ import { Contacts } from '../../../constants/Contacts';
 import '../../../styles/global.scss';
 import { IconLink } from '../../common/IconLink/IconLink';
 import styles from './Footer.module.scss';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaPhone } from 'react-icons/fa';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { MdLibraryBooks } from 'react-icons/md';
 
@@ -13,21 +13,22 @@ export const Footer = () => {
         <IconLink
           link={Contacts.TELEGRAM}
           icon={<FaTelegramPlane />}
-          iconSize="md"
-          iconColor="dark"
+          size="md"
+          text="Telegram"
         />
         <IconLink
           link={Contacts.INSTAGRAM}
           icon={<FaInstagram />}
-          iconSize="md"
-          iconColor="dark"
+          size="md"
+          text="Instagram"
         />
         <IconLink
           link={Contacts.B17}
           icon={<MdLibraryBooks />}
-          iconSize="md"
-          iconColor="dark"
+          size="md"
+          text="B17"
         />
+        <IconLink icon={<FaPhone />} size="sm" text={Contacts.PHONE_NUMBER} />
       </div>
     </footer>
   );

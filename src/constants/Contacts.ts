@@ -4,6 +4,7 @@ export const Contacts = {
   TELEGRAM: 'https://telegram.me/annavedgun',
   INSTAGRAM: 'https://www.instagram.com/anna.vedgun',
   B17: 'https://www.b17.ru/vedgun_anna',
+  PHONE_NUMBER: '+375 (44) 545 93 39',
 };
 
 export const Links: TLink[] = [

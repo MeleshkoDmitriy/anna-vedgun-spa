@@ -1,36 +1,27 @@
 import React, { FC } from 'react';
 import styles from './IconLink.module.scss';
-import clsx from 'clsx';
 
-type IconSize = 'sm' | 'md' | 'xl';
-type IconColor = 'dark' | 'light';
+type TSize = 'sm' | 'md' | 'xl';
 
 interface IconLinkProps {
   icon: React.ReactNode;
-  link: string;
-  iconSize: IconSize;
-  iconColor: IconColor;
+  link?: string;
+  size: TSize;
+  text?: string;
 }
 
-export const IconLink: FC<IconLinkProps> = ({
-  icon,
-  link,
-  iconSize,
-  iconColor,
-}) => {
-  const iconClasses = clsx(styles.icon, {
-    [styles[`icon--${iconSize}`]]: iconSize,
-    [styles[`icon--${iconColor}`]]: iconColor,
-  });
+export const IconLink: FC<IconLinkProps> = ({ icon, link, size, text }) => {
+  const sizeClass = styles[`icon--${size}`];
 
   return (
     <a
       href={link}
-      target="_blank"
+      target={link ? '_blank' : ''}
       rel="noopener noreferrer"
-      className={iconClasses}
+      className={`${styles.icon} ${sizeClass}`}
     >
-      {icon}
+      <span>{icon}</span>
+      {text && <span>{text}</span>}
     </a>
   );
 };

@@ -2,28 +2,47 @@
 @import '../../../styles/variables.scss';
 @import '../../../styles/mixins.scss';
 
+a {
+  color: $icon-color-black;
+  cursor: pointer;
+
+  &:hover {
+    color: $icon-color-green;
+  }
+}
+
 .icon {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
   transition: $transition;
 
+  span {
+    font-size: $icon-size-medium;
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 3px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
   &--sm {
-    @include icon-link('sm', 'dark');
+    span {
+      font-size: $icon-size-small;
+    }
   }
 
   &--md {
-    @include icon-link('md', 'dark');
+    span {
+      font-size: $icon-size-medium;
+    }
   }
 
   &--xl {
-    @include icon-link('xl', 'dark');
+    span {
+      font-size: $icon-size-large;
+    }
   }
-
-  &--dark {
-    @include icon-link('m', 'dark');
-  }
-
-  &--light {
-    @include icon-link('m', 'light');
-  }
-
 }

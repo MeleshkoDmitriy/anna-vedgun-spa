@@ -34,4 +34,12 @@
   p {
     margin: 0;
   }
+
+  .contacts {
+    margin-top: $spacing-medium;
+    width: 100%;
+    display: flex;
+    gap: $spacing-medium;
+    align-items: center;
+  }
 }
