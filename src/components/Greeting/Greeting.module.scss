@@ -28,6 +28,12 @@
   .title {
     margin-bottom: $spacing-medium;
     font-size: $font-size-title;
+
+    .hand {
+      position: relative;
+      top: 5px;
+      animation: hiShake 3s cubic-bezier(.36,.07,.19,.97) infinite;
+    }
   }
 
   .paragraph {
@@ -41,5 +47,27 @@
     display: flex;
     gap: $spacing-medium;
     align-items: center;
+  }
+}
+
+@keyframes hiShake {
+  0% {
+    transform: rotate(-10deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  35% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+
   }
 }

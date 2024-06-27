@@ -1,28 +1,48 @@
 @import '../../../styles/variables.scss';
 
-.link {
-  color: $color-text-primary;
-  height: 30px;
-  padding: $spacing-medium;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: $font-size-medium;
-  background-color: #fff;
-  border-radius: $border-radius-medium;
-  transition: $transition;
+.wrapper {
+  position: relative;
 
-  &:hover {
-    background-color: $color-accent-secondary;
+  .link {
+    color: $color-text-primary;
+    height: 30px;
+    padding: $spacing-medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-medium;
+    background-color: #fff;
+    border-radius: $border-radius-medium;
+    transition: $transition;
+
+    &:hover {
+      background-color: $color-accent-secondary;
+    }
+
+    &.active {
+      color: $color-bg-primary;
+      background-color: $color-accent-primary;
+
+      &:hover {
+        color: $color-bg-primary;
+        background-color: $color-bg-secondary;
+      }
+    }
   }
-}
 
-.active {
-  color: $color-bg-primary;
-  background-color: $color-accent-primary;
-
-  &:hover {
-    color: $color-bg-primary;
-    background-color: $color-bg-secondary;
+  .badge {
+    position: absolute;
+    bottom: 28px;
+    left: 60px;
+    background-color: $color-accent-primary;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: $transition;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

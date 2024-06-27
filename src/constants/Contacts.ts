@@ -22,7 +22,7 @@ export const Links: TLink[] = [
   },
 ];
 
-export const loadingPosts: TPost[] = [
+export const defaultPosts: TPost[] = [
   {
     id: 1,
     date: '',
