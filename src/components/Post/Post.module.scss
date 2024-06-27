@@ -7,9 +7,11 @@
   background-color: #fff;
   border-radius: $border-radius-medium;
 
-  display: flex;
-  flex-direction: column;
   gap: $spacing-medium;
+  outline: none;
+  border: none;
+  text-align: initial;
+  cursor: pointer;
 }
 
 .header {
@@ -18,7 +20,9 @@
 
   .author {
     width: 50px;
+    min-width: 50px;
     height: 50px;
+    min-height: 50px;
     border-radius: 50%;
     overflow: hidden;
     background-color: $color-accent-primary;
@@ -37,18 +41,44 @@
   }
 
   .title {
-    margin-left: $spacing-small;
+    margin-left: $spacing-medium;
+    font-size: 20px;
   }
 
   .date {
     margin-left: auto;
     color: $color-accent-primary;
+    font-size: 16px;
+  }
+  
+  .arrow {
+    font-size: 30px;
+    color: $color-text-primary;
+    margin-left: $spacing-medium;
+    transition: $transition;
+  }
+
+  .openTitle {
+    color: $color-accent-primary;
+    transition: $transition;
+  }
+
+  .openArrow {
+    color: $color-accent-primary;
+    transform: rotate(-180deg);
   }
 }
 
-// .content { 
-//   text-align: justify;
-// }
+.collapse {
+  transition: $transition;
+  overflow: hidden;
+}
+
+.content {
+  text-align: justify;
+  line-height: 20px;
+  font-size: 16px;
+}
 
 .footer {
   .link {
@@ -69,6 +99,4 @@
       margin-left: 3px;
     }
   }
-
-
 }
