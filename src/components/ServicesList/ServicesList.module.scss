@@ -12,11 +12,12 @@
 
   h3 {
     margin-bottom: $spacing-medium;
+    font-size: $font-size-large;
   }
 }
 
 .list {
-  font-size: 18px;
+  font-size: $font-size-medium;
 
   .icon {
     position: relative;

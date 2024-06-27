@@ -19,7 +19,7 @@ export const ServicesList = () => {
           </ul>
         </div>
         <div className={styles.notWorkWith}>
-          <h3>С чем я НЕ работаю:</h3>
+          <h3>С чем я не работаю:</h3>
           <ul className={styles.list}>
             {notWorkingWith.map((elem, i) => (
               <li key={i}>

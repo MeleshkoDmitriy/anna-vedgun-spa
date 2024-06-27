@@ -25,12 +25,14 @@
 }
 
 .body {
-  h2 {
+  .title {
     margin-bottom: $spacing-medium;
+    font-size: $font-size-title;
   }
 
-  p {
+  .paragraph {
     margin: 0;
+    font-size: $font-size-medium;
   }
 
   .contacts {

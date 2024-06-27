@@ -3,13 +3,11 @@
 
 
 .footer {
-  min-height: 100px;
   width: 100%;
-
 }
 
 .wrapper {
-  min-height: 100px;
+  min-height: $block-size;
   width: 100%;
   display: flex;
   justify-content: center;

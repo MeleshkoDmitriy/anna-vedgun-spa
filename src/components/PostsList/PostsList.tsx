@@ -7,15 +7,15 @@ interface PostsListProps {
   posts: TPost[];
 }
 
-export const PostsList: FC<PostsListProps> = ({
-  posts
-}) => {
+export const PostsList: FC<PostsListProps> = ({ posts }) => {
   const [openId, setOpenId] = useState<number | null>(null);
+
+  const reversedPosts = [...posts].reverse();
 
   return (
     <section className={styles.wrapper}>
       {posts.length > 0 &&
-        posts?.map((post: TPost) => (
+        reversedPosts.map((post: TPost) => (
           <Post
             key={post.id}
             {...post}

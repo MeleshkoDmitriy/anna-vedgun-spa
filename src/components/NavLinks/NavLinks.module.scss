@@ -1,4 +1,4 @@
-
+@import '../../styles/variables.scss';
 
 .nav {
     display: flex;
@@ -29,15 +29,15 @@
 
     .navMobile {
         position: fixed;
-        top: 80px;
+        top: $block-size;
         right: 0;
         width: 50%;
         height: calc(100dvh - 67px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        padding-top: 20px;
+        gap: $spacing-medium;
+        padding-top: $spacing-medium;
     }
 
 }
