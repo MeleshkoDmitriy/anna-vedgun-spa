@@ -4,21 +4,22 @@ import styles from './BlogPage.module.scss';
 import { useGetPostsQuery } from '../../store/slice/api/apiSlice';
 import { TPost } from '../../types/types';
 import { PostsList } from '../../components/PostsList/PostsList';
+import { loadingPosts } from '../../constants/Contacts';
 
 export const BlogPage = () => {
-  const [posts, setPosts] = useState<TPost[] | []>([]);
+  const [posts, setPosts] = useState<TPost[] | []>(loadingPosts);
 
-  const { data, isLoading, isError } = useGetPostsQuery();
+  const { data, isLoading } = useGetPostsQuery();
 
   useEffect(() => {
-    if (data && !isLoading) {
+    if (!!data && !isLoading) {
       setPosts(data);
     }
   }, [data]);
 
   return (
     <Layout>
-      <PostsList posts={posts} isLoading={isLoading} isError={isError} />
+      <PostsList posts={posts} />
     </Layout>
   );
 };

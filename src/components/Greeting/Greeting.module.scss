@@ -1,0 +1,37 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: $spacing-medium;
+}
+
+.image {
+  min-height: 300px;
+  height: 300px;
+  min-width: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $color-accent-primary;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 5px $color-bg-primary);
+
+  }
+}
+
+.body {
+
+  h2 {
+    margin-bottom: $spacing-medium;
+  }
+
+  p {
+    margin: 0;
+  }
+}

@@ -5,20 +5,15 @@ import styles from './PostsList.module.scss';
 
 interface PostsListProps {
   posts: TPost[];
-  isLoading: boolean;
-  isError: boolean;
 }
 
 export const PostsList: FC<PostsListProps> = ({
-  posts,
-  isLoading,
-  // isError,
+  posts
 }) => {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
     <section className={styles.wrapper}>
-      {isLoading && <h2>Loading..</h2>}
       {posts.length > 0 &&
         posts?.map((post: TPost) => (
           <Post
