@@ -3,12 +3,13 @@
 .wrapper {
   display: flex;
   width: 100%;
-  gap: $spacing-medium;
+  // gap: $spacing-medium;
+  justify-content: space-between;
 }
 
 .workWith,
 .notWorkWith {
-  flex: 1 1 50%;
+  flex: 0 1 45%;
 
   h3 {
     margin-bottom: $spacing-medium;
