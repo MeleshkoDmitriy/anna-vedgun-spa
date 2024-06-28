@@ -1,7 +1,12 @@
 import styles from './ServicesList.module.scss';
 import '../../styles/global.scss';
-import { notWorkingWith, workingWith } from '../../constants/Contacts';
+import {
+  Contacts,
+  notWorkingWith,
+  workingWith,
+} from '../../constants/Contacts';
 import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
+import { BookingButton } from '../common/IconLink/BookingButton/BookingButton';
 
 export const ServicesList = () => {
   return (
@@ -29,6 +34,9 @@ export const ServicesList = () => {
             ))}
           </ul>
         </div>
+      </div>
+      <div className={styles.btnWrapper}>
+        <BookingButton link={Contacts.TELEGRAM} color="light" />
       </div>
     </section>
   );

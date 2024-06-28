@@ -1,0 +1,74 @@
+@import '../../../../styles/variables.scss';
+
+.wrapper {
+  display: inline-block;
+  cursor: pointer;
+  padding: $spacing-medium;
+
+  .button {
+    all: unset;
+
+    .text {
+      font-size: $font-size-large;
+      font-weight: 700;
+    }
+  }
+}
+
+.light:hover,
+.light:focus,
+.light:active {
+  .button { 
+    border: 3px solid #fff;
+    border-radius: $border-radius-medium;
+    padding: $spacing-small $spacing-medium;
+    background-color: $color-accent-primary;
+
+    .text {
+       color: #fff;
+    }
+  }
+}
+
+.light {
+  .button { 
+    border: 3px solid $color-accent-primary;
+    border-radius: $border-radius-medium;
+    padding: $spacing-small $spacing-medium;
+    background-color: #fff;
+    transition: $transition;
+
+    .text {
+       color: $color-accent-primary;
+    }
+  }
+}
+
+.green {
+  .button { 
+    border: 3px solid #fff;
+    border-radius: $border-radius-medium;
+    padding: $spacing-small $spacing-medium;
+    background-color: $color-accent-primary;
+
+    .text {
+       color: #fff;
+    }
+  }
+}
+
+.green:hover,
+.green:focus,
+.green:active {
+  .button { 
+    border: 3px solid $color-accent-primary;
+    border-radius: $border-radius-medium;
+    padding: $spacing-small $spacing-medium;
+    background-color: #fff;
+    transition: $transition;
+
+    .text {
+       color: $color-accent-primary;
+    }
+  }
+}
