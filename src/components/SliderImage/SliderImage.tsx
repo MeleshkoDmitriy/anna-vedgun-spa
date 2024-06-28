@@ -1,4 +1,4 @@
-import styles from './Slider.module.scss';
+import styles from './SliderImage.module.scss';
 import '../../styles/global.scss';
 import { diplomasArray } from '../../constants/Contacts';
 import { useState } from 'react';
@@ -7,7 +7,7 @@ import { IoIosArrowDropleftCircle } from 'react-icons/io';
 import { FaRegCircleDot } from 'react-icons/fa6';
 import { FaCircleDot } from 'react-icons/fa6';
 
-export const Slider = () => {
+export const SliderImage = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const showPrevImage = () => {
@@ -34,7 +34,11 @@ export const Slider = () => {
     <section className="blockWhite">
       <h2 className={styles.title}>Образование</h2>
       <div className={styles.wrapper}>
-        <img className={styles.image} src={diplomasArray[imageIndex]} alt="" />
+        <img
+          className={styles.image}
+          src={diplomasArray[imageIndex]}
+          alt={diplomasArray[imageIndex]}
+        />
         <button
           onClick={showPrevImage}
           className={`${styles.button}  ${styles.left}`}

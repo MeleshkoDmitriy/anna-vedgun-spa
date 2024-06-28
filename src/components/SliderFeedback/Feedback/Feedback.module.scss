@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  max-height: 600px;
+  margin-bottom: 100px;
+
+  .body {
+    max-width: 600px;
+  }
+
+  .date {
+    font-style: italic;
+  }
+
+  .mt {
+    height: 40px;
+  }
+}

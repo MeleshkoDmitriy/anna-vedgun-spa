@@ -4,6 +4,10 @@
   display: inline-block;
   cursor: pointer;
   padding: $spacing-medium;
+  position: relative;
+  top: 0;
+  transition: $transition;
+
 
   .button {
     all: unset;
@@ -11,8 +15,21 @@
     .text {
       font-size: $font-size-large;
       font-weight: 700;
+      text-transform: uppercase;
     }
   }
+
+  &:hover,
+  &:focus {
+    top: -5px;
+  }
+
+  
+  &:active {
+    top: 0;
+    transition: $transition-fast;
+  }
+
 }
 
 .light:hover,

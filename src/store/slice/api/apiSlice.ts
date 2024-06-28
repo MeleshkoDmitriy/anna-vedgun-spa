@@ -1,15 +1,19 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../../../api/api';
-import { TPost } from '../../../types/types';
+import { TFeedback, TPost } from '../../../types/types';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
-  tagTypes: ['posts'],
+  tagTypes: ['posts', 'feedbacks'],
   endpoints: (builder) => ({
     getPosts: builder.query<TPost[], void>({
       query: () => '/posts',
       providesTags: ['posts'],
+    }),
+    getFeedbacks: builder.query<TFeedback[], void>({
+      query: () => '/feedbacks',
+      providesTags: ['feedbacks'],
     }),
     // getUserById: builder.query<User, string>({
     //   query: (id) => `/users/${id}`,
@@ -24,4 +28,4 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetPostsQuery } = apiSlice;
+export const { useGetPostsQuery, useGetFeedbacksQuery } = apiSlice;

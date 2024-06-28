@@ -11,3 +11,9 @@ export type TPost = {
   url?: string;
   image?: string;
 };
+
+export type TFeedback = {
+  id: number;
+  date: string;
+  text: string;
+};

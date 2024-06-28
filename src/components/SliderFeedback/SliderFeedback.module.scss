@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+
+.title {
+  text-align: center;
+  font-size: $font-size-title;
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.body {
+  max-height: 500px;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.button {
+  all: unset;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: $spacing-large;
+  cursor: pointer;
+  transition: $transition;
+
+  .icon {
+    transition: $transition;
+    color: #fff;
+    font-size: 40px;
+  }
+}
+
+.left {
+  left: 0;
+
+  &:hover {
+    .icon {
+      transform: scale(1.3);
+    }
+  }
+  
+  &:active {
+    .icon {
+      transition: 0.05s;
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.right {
+  right: 0;
+
+  &:hover {
+    .icon {
+      transform: scale(1.3);
+    }
+  }
+  
+  &:active {
+    .icon {
+      transition: 0.05s;
+      transform: translateX(5px);
+    }
+  }
+}
+
+
+.indexWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-medium;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+  transition: $transition-fast;
+  backdrop-filter: blur(2px);
+  padding-top: $spacing-small;
+
+  .indexButton {
+    all: unset;
+    font-size: $font-size-large;
+    transition: $transition-fast;
+
+
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    .indexIcon {
+      color: $color-bg-secondary;
+    }
+
+    .chosen {
+      color: #fff;
+    }
+  }
+}

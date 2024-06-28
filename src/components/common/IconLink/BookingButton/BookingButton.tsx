@@ -21,7 +21,7 @@ export const BookingButton: FC<BookingButtonProps> = ({ link, color }) => {
       rel="noopener noreferrer"
     >
       <button className={styles.button}>
-        <span className={styles.text}>Записаться</span>
+        <span className={styles.text}>Записаться на консультацию</span>
       </button>
     </a>
   );
