@@ -1,4 +1,18 @@
 import { TLink, TPost } from '../types/types';
+import diploma from '../assets/images/education/diploma.jpg';
+import diploma2 from '../assets/images/education/diploma2.jpg';
+import diploma3 from '../assets/images/education/diploma3.jpg';
+import diploma4 from '../assets/images/education/diploma4.jpg';
+import diploma5 from '../assets/images/education/diploma5.jpg';
+import diploma6 from '../assets/images/education/diploma6.jpg';
+import diploma7 from '../assets/images/education/diploma7.jpg';
+import diploma8 from '../assets/images/education/diploma8.jpg';
+import diploma9 from '../assets/images/education/diploma9.jpg';
+import diploma10 from '../assets/images/education/diploma10.jpg';
+import diploma11 from '../assets/images/education/diploma11.jpg';
+import diploma12 from '../assets/images/education/diploma12.jpg';
+import diploma13 from '../assets/images/education/diploma13.jpg';
+import diploma14 from '../assets/images/education/diploma14.jpg';
 
 export const Contacts = {
   TELEGRAM: 'https://telegram.me/annavedgun',
@@ -74,4 +88,21 @@ export const notWorkingWith: string[] = [
   'Детский и подростковый возраст (от 0 до 18 лет)',
   'Не работаю с друзьями и знакомыми',
   'Семейная терапия',
+];
+
+export const diplomasArray: string[] = [
+  diploma,
+  diploma2,
+  diploma3,
+  diploma4,
+  diploma5,
+  diploma6,
+  diploma7,
+  diploma8,
+  diploma9,
+  diploma10,
+  diploma11,
+  diploma12,
+  diploma13,
+  diploma14,
 ];
