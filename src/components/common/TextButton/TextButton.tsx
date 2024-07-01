@@ -1,13 +1,15 @@
 import { FC } from 'react';
-import styles from './BookingButton.module.scss';
+import styles from './TextButton.module.scss';
 import clsx from 'clsx';
 
-interface BookingButtonProps {
-  link: string;
+interface TextButtonProps {
   color: 'light' | 'green';
+  text: string;
+  link?: string;
+  onClick?: (event: Event) => void;
 }
 
-export const BookingButton: FC<BookingButtonProps> = ({ link, color }) => {
+export const TextButton: FC<TextButtonProps> = ({ link, color, text, onClick }) => {
   const classes = clsx(styles.wrapper, {
     [styles.light]: color === 'light',
     [styles.green]: color === 'green',
@@ -20,8 +22,8 @@ export const BookingButton: FC<BookingButtonProps> = ({ link, color }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <button className={styles.button}>
-        <span className={styles.text}>Записаться на консультацию</span>
+      <button className={styles.button} onClick={onClick}>
+        <span className={styles.text}>{text}</span>
       </button>
     </a>
   );

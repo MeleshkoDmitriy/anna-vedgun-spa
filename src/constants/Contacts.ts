@@ -23,12 +23,12 @@ export const Contacts = {
 
 export const Links: TLink[] = [
   {
-    title: 'Обо мне',
+    title: 'Главная',
     path: '/',
   },
   {
-    title: 'Контакты',
-    path: '/contacts',
+    title: 'Оферта',
+    path: '/offer',
   },
   {
     title: 'Блог',

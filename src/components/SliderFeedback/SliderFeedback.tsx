@@ -8,10 +8,16 @@ import { FaCircleDot } from 'react-icons/fa6';
 import { useGetFeedbacksQuery } from '../../store/slice/api/apiSlice';
 import { TFeedback } from '../../types/types';
 import { Feedback } from './Feedback/Feedback';
+import { TextButton } from '../common/TextButton/TextButton';
+import { Contacts } from '../../constants/Contacts';
+import { FormFeedback } from '../FormFeedback/FormFeedback';
+import ReactDOM from 'react-dom';
 
 export const SliderFeedback = () => {
   const [feedbackIndex, setFeedbackIndex] = useState(0);
   const [feedbacks, setFeedbacks] = useState<TFeedback[] | []>([]);
+
+  const [isForm, setIsForm] = useState(false);
 
   const { data, isLoading, isError } = useGetFeedbacksQuery();
 
@@ -39,6 +45,14 @@ export const SliderFeedback = () => {
         return feedbackIndex + 1;
       }
     });
+  };
+
+  const handleShowForm = () => {
+    setIsForm(true);
+  };
+
+  const handleCloseForm = () => {
+    setIsForm(false);
   };
 
   if (isLoading) {
@@ -88,6 +102,16 @@ export const SliderFeedback = () => {
           ))}
         </div>
       </div>
+      <TextButton
+        color="light"
+        text="Оставить отзыв"
+        onClick={handleShowForm}
+      />
+      {isForm &&
+        ReactDOM.createPortal(
+          <FormFeedback onClose={handleCloseForm} />,
+          document.body,
+        )}
     </section>
   );
 };

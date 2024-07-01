@@ -17,3 +17,10 @@ export type TFeedback = {
   date: string;
   text: string;
 };
+
+export type TMessage = {
+  name: string;
+  text: string;
+  date: string;
+  isAllowed: boolean;
+};

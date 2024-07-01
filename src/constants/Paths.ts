@@ -1,6 +1,6 @@
 export const Paths = {
   HOME: '/',
   BLOG: '/blog',
-  CONTACTS: '/contacts',
+  OFFER: '/offer',
   NOTFOUND: '*',
 } as const;

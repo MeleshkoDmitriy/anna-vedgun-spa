@@ -1,0 +1,183 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-height: 300px;
+  min-width: 300px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $spacing-medium;
+  padding: $spacing-medium;
+  background-color: #fff;
+  border-radius: $border-radius-medium;
+  border: 2px solid $color-accent-primary;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  z-index: 110;
+  top: -20px;
+  right: -20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid $color-accent-primary;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: $transition;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  button {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+    transition: $transition;
+
+    .icon {
+      font-size: $font-size-title;
+      color: $color-accent-primary;
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    border: 2px solid #fff;
+
+    button {
+      background-color: $color-accent-primary;
+    }
+
+    .icon {
+      color: #fff;
+    }
+  }
+}
+
+.title {
+  font-size: $font-size-large;
+  color: $color-accent-primary;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-medium;
+  width: 100%;
+
+
+  .actions {
+    width: 100%;
+  }
+}
+
+.error,
+.empty {
+  display: inline-block;
+  color: $color-error;
+  font-size: $font-size-small;
+  height: 20px;
+}
+
+.empty {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.name,
+.text,
+.submit {
+  width: 100%;
+  padding: $spacing-medium;
+  font-size: $font-size-medium;
+  border-radius: $border-radius-medium;
+  font-size: $font-size-medium;
+  transition: $transition;
+  outline: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $color-accent-primary;
+  }
+}
+
+.name {
+  height: 64px;
+}
+
+.text {
+  height: 128px;
+  resize: none;
+  border: 2px solid $color-text-primary;
+}
+
+.submit {
+  height: 64px;
+  background-color: $color-accent-primary;
+  color: #fff;
+  cursor: pointer;
+  transition: $transition;
+  border: 2px solid $color-accent-primary;
+  font-size: $font-size-large;
+  outline: transparent;
+  font-weight: bold;
+
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #fff;
+    color: $color-accent-primary;
+  }
+}
+
+.confirm {
+  display: flex;
+  align-items: center;
+  gap: $spacing-small;
+
+  .confirmText {
+    font-size: 12px;
+    color: $color-accent-primary;
+    text-decoration: underline;
+  }
+  
+  .checkbox {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+
+    &:checked {
+      background-color: $color-accent-primary;
+      border-color: $color-accent-primary;
+    }
+  }
+}

@@ -3,8 +3,7 @@
 .wrapper {
   display: flex;
   width: 100%;
-  // gap: $spacing-medium;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .workWith,

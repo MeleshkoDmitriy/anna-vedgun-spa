@@ -6,7 +6,7 @@ import {
   workingWith,
 } from '../../constants/Contacts';
 import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
-import { BookingButton } from '../common/IconLink/BookingButton/BookingButton';
+import { TextButton } from '../common/TextButton/TextButton';
 
 export const ServicesList = () => {
   return (
@@ -36,7 +36,11 @@ export const ServicesList = () => {
         </div>
       </div>
       <div className={styles.btnWrapper}>
-        <BookingButton link={Contacts.TELEGRAM} color="light" />
+        <TextButton
+          link={Contacts.TELEGRAM}
+          color="light"
+          text="Записаться на консультацию"
+        />
       </div>
     </section>
   );

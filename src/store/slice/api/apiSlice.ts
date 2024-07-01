@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { BASE_URL } from '../../../api/api';
-import { TFeedback, TPost } from '../../../types/types';
+import { TFeedback, TMessage, TPost } from '../../../types/types';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
@@ -15,6 +15,13 @@ export const apiSlice = createApi({
       query: () => '/feedbacks',
       providesTags: ['feedbacks'],
     }),
+    postMessage: builder.mutation<TMessage, void>({
+      query: (newMessage) => ({
+        url: '/messages',
+        method: 'POST',
+        body: newMessage,
+      }),
+    }),
     // getUserById: builder.query<User, string>({
     //   query: (id) => `/users/${id}`,
     // }),
@@ -28,4 +35,8 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { useGetPostsQuery, useGetFeedbacksQuery } = apiSlice;
+export const {
+  useGetPostsQuery,
+  useGetFeedbacksQuery,
+  usePostMessageMutation,
+} = apiSlice;

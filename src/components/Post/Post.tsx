@@ -51,7 +51,11 @@ export const Post: FC<PostProps> = ({
     <button className={styles.wrapper} onClick={() => onClick()}>
       <div className={styles.header}>
         <div className={styles.author}>
-          <img src={author} alt="author" />
+          <img
+            src={author}
+            alt="author"
+            className={`${isOpen ? styles.openImg : ''}`}
+          />
         </div>
         <h3 className={`${styles.title} ${isOpen ? styles.openTitle : ''}`}>
           {title}

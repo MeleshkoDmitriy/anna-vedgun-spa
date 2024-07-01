@@ -5,7 +5,6 @@ interface FeedbackProps {
   text: string;
   date: string;
 }
-
 interface ParagraphProps {
   className?: string;
   children: React.ReactNode;
@@ -34,7 +33,7 @@ export const Feedback: FC<FeedbackProps> = ({ text, date }) => {
     <div className={styles.wrapper}>
       <div className={styles.body}>{formatText(text)}</div>
       <span className={styles.date}>{date}</span>
-      <div className={styles.mt}></div>
+      <div className={styles.mt}>-</div>
     </div>
   );
 };

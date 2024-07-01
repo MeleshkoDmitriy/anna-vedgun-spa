@@ -12,7 +12,7 @@ export const Greeting = () => {
     <section className="blockWhite">
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <img src={image} alt="Анна Ведьгун" title="Анна Ведьгун" />
+          <img src={image} alt="Анна Ведьгун" />
         </div>
         <div className={styles.body}>
           <h2 className={styles.title}>
