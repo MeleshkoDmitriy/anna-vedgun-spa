@@ -7,6 +7,8 @@ import {
 } from '../../constants/Contacts';
 import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
 import { TextButton } from '../common/TextButton/TextButton';
+import { Link } from 'react-router-dom';
+import { Paths } from '../../constants/Paths';
 
 export const ServicesList = () => {
   return (
@@ -41,6 +43,13 @@ export const ServicesList = () => {
           color="light"
           text="Записаться на консультацию"
         />
+      </div>
+      <div className={styles.linkWrapper}>
+        <Link to={Paths.OFFER}>
+          <span className={styles.link}>
+            Ознакомиться с публичным договором
+          </span>
+        </Link>
       </div>
     </section>
   );

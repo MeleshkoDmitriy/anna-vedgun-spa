@@ -23,7 +23,8 @@ export const SliderFeedback = () => {
 
   useEffect(() => {
     if (!!data && !isLoading && !isError) {
-      setFeedbacks(data);
+      const reversedFeedbacks = [...data].reverse();
+      setFeedbacks(reversedFeedbacks);
     }
   }, [data]);
 
