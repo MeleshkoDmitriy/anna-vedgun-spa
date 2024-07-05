@@ -7,6 +7,7 @@ import { Paths } from './constants/Paths';
 import { BlogPage } from './pages/BlogPage/BlogPage';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import { OfferPage } from './pages/OfferPage/OfferPage';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
 
   {
     path: Paths.OFFER,
-    element: <h1>OFFER</h1>,
+    element: <OfferPage />,
   },
   {
     path: Paths.BLOG,

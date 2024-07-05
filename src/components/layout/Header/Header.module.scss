@@ -18,4 +18,9 @@
 .title {
   color: $color-accent-primary;
   font-size: $font-size-title;
+  transition: $transition;
+
+  &:hover {
+    color: $color-bg-secondary;
+  }
 }
