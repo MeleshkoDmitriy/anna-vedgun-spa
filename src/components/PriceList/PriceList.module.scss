@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-medium;
+  width: 100%;
+
+  .title {
+    margin-bottom: $spacing-medium;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-medium;
+
+  .price {
+    line-height: 1;
+
+    .number {
+       font-size: 100px;
+       font-weight: 700;
+       color: $color-accent-primary;
+    }
+    .currency {
+      font-size: $font-size-medium;
+      font-weight: 100;
+    }
+  }
+}
+
+.btnWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkWrapper {
+
+  .link {
+    transition: $transition;
+    color: $color-accent-primary;
+    font-size: $font-size-small;
+    text-decoration: underline;
+    position: relative;
+    top: 0;
+
+    &:hover {
+      top: -3px;
+      text-shadow: 0 3px 3px $color-accent-secondary;
+    }
+  }
+}

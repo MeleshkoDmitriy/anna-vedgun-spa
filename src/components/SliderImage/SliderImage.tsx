@@ -31,7 +31,7 @@ export const SliderImage = () => {
   };
 
   return (
-    <section className="blockWhite">
+    <section className="blockGreen">
       <h2 className={styles.title}>Образование</h2>
       <div className={styles.wrapper}>
         <img

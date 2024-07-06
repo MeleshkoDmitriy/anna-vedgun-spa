@@ -4,7 +4,7 @@
   text-align: center;
   padding-bottom: $spacing-medium;
   font-size: $font-size-title;
-  color: $color-accent-primary;
+  color:#fff;
 }
 
 .wrapper {
@@ -37,7 +37,7 @@
 
   .icon {
     transition: $transition;
-    color: $color-accent-primary;
+    color: #fff;
     font-size: 40px;
   }
 }
@@ -87,7 +87,7 @@
   bottom: 0;
   cursor: pointer;
   transition: $transition-fast;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
   padding-top: $spacing-small;
 
   .indexButton {
@@ -105,7 +105,7 @@
     }
 
     .chosen {
-      color: $color-accent-primary;
+      color: #fff;
     }
   }
 }

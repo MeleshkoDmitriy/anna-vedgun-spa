@@ -92,6 +92,7 @@
     padding: $spacing-small $spacing-medium;
     background-color: #fff;
     transition: $transition;
+    box-shadow: 0px 5px 0px $color-accent-primary;
 
     .text {
       color: $color-accent-primary;
