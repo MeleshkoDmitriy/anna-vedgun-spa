@@ -1,13 +1,30 @@
 import styles from './PriceList.module.scss';
 import '../../styles/global.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TextButton } from '../common/TextButton/TextButton';
 import { Link } from 'react-router-dom';
 import { Paths } from '../../constants/Paths';
 import { Contacts } from '../../constants/Contacts';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../../store/slice/userSlice';
 
 export const PriceList = () => {
-  const [price] = useState(50);
+  const [price, setPrice] = useState(50);
+
+  const dispatch = useDispatch();
+
+  const { price: fetchedPrice, isLoading } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      setPrice(fetchedPrice);
+    }
+  }, [isLoading, fetchedPrice]);
+
   return (
     <section className="blockWhite" id="price">
       <div className={styles.wrapper}>
