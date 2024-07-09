@@ -4,6 +4,7 @@ import { TLink } from '../../../types/types';
 import { NavLink } from 'react-router-dom';
 import { useGetPostsQuery } from '../../../store/slice/api/apiSlice';
 import { IoIosArrowUp } from 'react-icons/io';
+import { DropdownMenu } from '../../DropdownMenu/DropdownMenu';
 
 interface LinkProps {
   link: TLink;
@@ -44,6 +45,11 @@ export const AppNavLink: FC<LinkProps> = ({ link, onClick }: LinkProps) => {
       </NavLink>
       {path === '/blog' && length > 0 && (
         <div className={styles.badge}>{length}</div>
+      )}
+      {title === 'Главная' && (
+        <div className={styles.dropdownWrapper}>
+          <DropdownMenu />
+        </div>
       )}
     </div>
   );

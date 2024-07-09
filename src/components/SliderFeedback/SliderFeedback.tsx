@@ -61,7 +61,7 @@ export const SliderFeedback = () => {
   }
 
   return (
-    <section className="blockGreen">
+    <section className="blockGreen" id="feedbacks">
       <h2 className={styles.title}>Отзывы</h2>
       <div className={styles.wrapper}>
         <div className={styles.body}>

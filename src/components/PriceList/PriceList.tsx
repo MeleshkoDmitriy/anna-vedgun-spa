@@ -9,7 +9,7 @@ import { Contacts } from '../../constants/Contacts';
 export const PriceList = () => {
   const [price] = useState(50);
   return (
-    <section className="blockWhite">
+    <section className="blockWhite" id="price">
       <div className={styles.wrapper}>
         <h2 className={styles.title}>Цена консультации</h2>
         <div className={styles.body}>

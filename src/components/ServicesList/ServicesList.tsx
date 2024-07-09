@@ -5,7 +5,7 @@ import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
 
 export const ServicesList = () => {
   return (
-    <section className="blockGreen">
+    <section className="blockGreen" id="services">
       <div className={styles.wrapper}>
         <div className={styles.workWith}>
           <h3>С какими запросами я работаю:</h3>

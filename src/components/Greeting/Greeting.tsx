@@ -9,7 +9,7 @@ import { MdOutlineWavingHand } from 'react-icons/md';
 
 export const Greeting = () => {
   return (
-    <section className="blockWhite">
+    <section className="blockWhite" id="contacts">
       <div className={styles.wrapper}>
         <div className={styles.image}>
           <img src={image} alt="Анна Ведьгун" />

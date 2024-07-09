@@ -15,40 +15,56 @@
     border-radius: $border-radius-medium;
     transition: $transition;
 
-    &:hover {
-      background-color: $color-accent-secondary;
-
-      .icon {
-        transform: rotate(-180deg);
-      }
-    }
-
     &.active {
       color: $color-bg-primary;
       background-color: $color-accent-primary;
+    }
 
-      &:hover {
-        color: $color-bg-primary;
-        background-color: $color-bg-secondary;
-      }
+    &:hover {
+      background-color: $color-accent-secondary;
     }
   }
 
-  .badge {
-    position: absolute;
-    bottom: 28px;
-    left: 60px;
-    background-color: $color-accent-primary;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    transition: $transition;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &:hover {
+    .link.active {
+      color: $color-bg-primary;
+      background-color: $color-bg-secondary;
+    }
+    .icon {
+      transform: rotate(-180deg);
+    }
+    .dropdownWrapper {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   }
+}
+
+.dropdownWrapper {
+  transition: $transition;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  position: absolute;
+  top: 45px;
+  z-index: 10;
+}
+
+.badge {
+  position: absolute;
+  bottom: 28px;
+  left: 60px;
+  background-color: $color-accent-primary;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: $transition;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .iconWrapper {

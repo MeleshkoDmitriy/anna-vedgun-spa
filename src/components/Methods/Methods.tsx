@@ -4,7 +4,7 @@ import { MdOutlinePsychology } from 'react-icons/md';
 
 export const Methods = () => {
   return (
-    <section className="blockWhite">
+    <section className="blockWhite" id="methods">
       <div className={styles.wrapper}>
         <h2>Методы</h2>
         <div className={styles.methods}>

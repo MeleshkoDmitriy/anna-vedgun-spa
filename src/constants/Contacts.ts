@@ -106,3 +106,12 @@ export const diplomasArray: string[] = [
   diploma13,
   diploma14,
 ];
+
+export const Anchors = {
+  CONTACTS: 'Мои контакты',
+  SERVICES: 'С чем работаю',
+  PRICE: 'Цена и формат',
+  EDUCATION: 'Образование',
+  METHODS: 'Методы работы',
+  FEEDBACKS: 'Отзывы клиентов',
+};
