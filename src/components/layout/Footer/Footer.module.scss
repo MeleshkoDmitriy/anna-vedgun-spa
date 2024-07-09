@@ -1,16 +1,35 @@
 @import '../../../styles/global.scss';
 @import '../../../styles/variables.scss';
 
-
 .footer {
+  margin: $spacing-medium 0;
   width: 100%;
 }
 
 .wrapper {
-  min-height: $block-size;
+  height: 150px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: $spacing-medium;
+}
+
+.socials {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qrWrapper {
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  .qr {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+  }
 }
