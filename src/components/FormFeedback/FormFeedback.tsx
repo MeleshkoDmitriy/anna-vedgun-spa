@@ -1,22 +1,34 @@
 import { useForm } from 'react-hook-form';
 import styles from './FormFeedback.module.scss';
 import { IoCloseOutline } from 'react-icons/io5';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { usePostMessageMutation } from '../../store/slice/api/apiSlice';
 import { TMessage } from '../../types/types';
 import { calcDate } from '../../utils/calcDate';
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 type Message = Omit<TMessage, 'date'>;
 
 export const FormFeedback = ({ onClose }) => {
   const [isChecked, setIsChecked] = useState(true);
+  const [buttonText, setButtonText] = useState('Отправить');
+
+  const formRef = useRef<HTMLDivElement>(null);
+  useClickOutside(formRef, () => {
+    onClose();
+  });
 
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      name: 'Аноним',
+      text: '',
+    },
+  });
 
   const [postMessage] = usePostMessageMutation();
 
@@ -32,19 +44,22 @@ export const FormFeedback = ({ onClose }) => {
 
     try {
       await postMessage(newMessage).unwrap();
-      reset();
     } catch (error) {
       console.error('Error sending message:', error);
     }
 
-    onClose();
-  };
+    setButtonText('Отправлено!');
 
-  console.log();
+    setTimeout(() => {
+      reset();
+      onClose();
+      setButtonText('Отправить');
+    }, 1500);
+  };
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
+      <div className={styles.container} ref={formRef}>
         <div className={styles.close}>
           <button onClick={onClose} type="button">
             <IoCloseOutline className={styles.icon} />
@@ -76,12 +91,12 @@ export const FormFeedback = ({ onClose }) => {
           </div>
           <div className={styles.actions}>
             <button className={styles.submit} type="submit">
-              Отправить
+              {buttonText}
             </button>
           </div>
           <div className={`${styles.actions} ${styles.confirm}`}>
             <span className={styles.confirmText}>
-              Разрешаю анонимную публикацию отзыва на этом сайте:
+              Я разрешаю анонимную публикацию отзыва на этом сайте:
             </span>
             <input
               {...register('isAllowed')}

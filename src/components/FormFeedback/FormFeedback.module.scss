@@ -92,9 +92,9 @@
   gap: $spacing-medium;
   width: 100%;
 
-
   .actions {
     width: 100%;
+    max-height: 128px;
   }
 }
 
@@ -103,7 +103,8 @@
   display: inline-block;
   color: $color-error;
   font-size: $font-size-small;
-  height: 20px;
+  position: relative;
+  top: -9px;
 }
 
 .empty {
@@ -150,7 +151,6 @@
   outline: transparent;
   font-weight: bold;
 
-
   &:hover,
   &:focus,
   &:active {
@@ -169,7 +169,7 @@
     color: $color-accent-primary;
     text-decoration: underline;
   }
-  
+
   .checkbox {
     margin: 0;
     width: 20px;

@@ -17,6 +17,10 @@
 
     &:hover {
       background-color: $color-accent-secondary;
+
+      .icon {
+        transform: rotate(-180deg);
+      }
     }
 
     &.active {
@@ -44,5 +48,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.iconWrapper {
+  transition: $transition;
+  position: relative;
+  top: 3px;
+  left: 5px;
+
+  .icon {
+    transition: $transition;
   }
 }

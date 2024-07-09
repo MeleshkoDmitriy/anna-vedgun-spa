@@ -3,6 +3,7 @@ import styles from './AppNavLink.module.scss';
 import { TLink } from '../../../types/types';
 import { NavLink } from 'react-router-dom';
 import { useGetPostsQuery } from '../../../store/slice/api/apiSlice';
+import { IoIosArrowUp } from 'react-icons/io';
 
 interface LinkProps {
   link: TLink;
@@ -35,6 +36,11 @@ export const AppNavLink: FC<LinkProps> = ({ link, onClick }: LinkProps) => {
         }}
       >
         <span>{title}</span>
+        {title === 'Главная' && (
+          <span className={styles.iconWrapper}>
+            <IoIosArrowUp className={styles.icon} />
+          </span>
+        )}
       </NavLink>
       {path === '/blog' && length > 0 && (
         <div className={styles.badge}>{length}</div>
