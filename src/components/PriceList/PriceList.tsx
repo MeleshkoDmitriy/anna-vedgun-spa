@@ -7,6 +7,7 @@ import { Paths } from '../../constants/Paths';
 import { Contacts } from '../../constants/Contacts';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData } from '../../store/slice/userSlice';
+import { FaLink } from 'react-icons/fa6';
 
 export const PriceList = () => {
   const [price, setPrice] = useState(50);
@@ -46,6 +47,7 @@ export const PriceList = () => {
         <div className={styles.linkWrapper}>
           <Link to={Paths.OFFER}>
             <span className={styles.link}>
+              <FaLink className={styles.icon} />
               Ознакомиться с публичным договором
             </span>
           </Link>

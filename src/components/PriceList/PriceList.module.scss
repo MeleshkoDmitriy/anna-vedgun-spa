@@ -42,6 +42,7 @@
 
 .linkWrapper {
 
+
   .link {
     transition: $transition;
     color: $color-accent-primary;
@@ -49,6 +50,13 @@
     text-decoration: underline;
     position: relative;
     top: 0;
+
+    .icon {
+      position: relative;
+      top: 3px;
+      margin-right: 3px;
+    }
+  
 
     &:hover {
       top: -3px;

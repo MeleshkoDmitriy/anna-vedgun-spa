@@ -3,12 +3,15 @@
 .wrapper {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  gap: $spacing-medium;
 }
 
 .workWith,
 .notWorkWith {
-  flex: 0 1 45%;
+  padding: $spacing-medium;
+  background-color: $color-accent-primary;
+  border-radius: $border-radius-medium;
+  flex: 1 1 50%;
 
   h3 {
     margin-bottom: $spacing-medium;

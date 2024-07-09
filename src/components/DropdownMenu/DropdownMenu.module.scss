@@ -12,6 +12,10 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-small;
+
+    li:hover > .name {
+      border-bottom: 1px solid #fff;
+    }
   }
 
   .name,
@@ -20,10 +24,6 @@
     cursor: pointer;
     transition: $transition;
     border-bottom: 1px solid transparent;
-
-    &:hover {
-      border-bottom: 1px solid #fff;
-    } 
   }
 
   .icon {
