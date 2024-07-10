@@ -1,66 +1,101 @@
 @import '../../styles/variables.scss';
 
+.outer {
+  position: relative;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: $spacing-medium;
   width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+  background-color: $color-bg-opacity;
+  transition: $transition;
 
-  .title {
-    margin-bottom: $spacing-medium;
+  &:hover {
+    backdrop-filter: blur(0px);
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      margin-bottom: $spacing-medium;
+      text-align: center;
+    }
   }
 }
 
 .body {
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-medium;
 
   .price {
     line-height: 1;
+    position: relative;
+    right: 10px;
 
     .number {
-       font-size: 100px;
-       font-weight: 700;
-       color: $color-accent-primary;
+      font-size: 100px;
+      font-weight: 700;
+      color: $color-accent-primary;
     }
     .currency {
       font-size: $font-size-medium;
       font-weight: 100;
+      position: absolute;
+      bottom: 5px;
+      right: -10px;
     }
   }
 }
 
-.btnWrapper {
+.subWrapper {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  font-weight: 100;
+  padding-inline: $spacing-medium;
 }
 
-.linkWrapper {
+.link {
+  transition: $transition;
+  color: $color-accent-primary;
+  font-size: $font-size-small;
+  text-decoration: underline;
+  position: relative;
+  top: 0;
+  font-weight: 100;
 
 
-  .link {
-    transition: $transition;
-    color: $color-accent-primary;
-    font-size: $font-size-small;
-    text-decoration: underline;
+  .icon {
     position: relative;
-    top: 0;
-
-    .icon {
-      position: relative;
-      top: 3px;
-      margin-right: 3px;
-    }
-  
-
-    &:hover {
-      top: -3px;
-      text-shadow: 0 3px 3px $color-accent-secondary;
-    }
+    top: 3px;
+    margin-right: 3px;
   }
+
+  &:hover {
+    top: -3px;
+    text-shadow: 0 3px 3px $color-accent-secondary;
+  }
+}
+
+.flower {
+  position: absolute;
+  right: 150px;
+  bottom: -50px;
+  height: 600px;
 }

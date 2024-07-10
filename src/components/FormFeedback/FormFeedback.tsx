@@ -25,7 +25,7 @@ export const FormFeedback = ({ onClose }) => {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      name: 'Аноним',
+      name: 'Анонимно',
       text: '',
     },
   });

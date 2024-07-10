@@ -1,11 +1,28 @@
 @import '../../styles/variables.scss';
 
+.outer {
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  left: 120px;
+  bottom: -50px;
+  height: 600px;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: $spacing-medium;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(3px);
+  background-color: $color-bg-opacity;
+  transition: $transition;
+
 
   .methods {
     display: flex;

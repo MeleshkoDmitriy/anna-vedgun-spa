@@ -17,19 +17,19 @@ export const Footer = () => {
               link={Contacts.TELEGRAM}
               icon={<FaTelegramPlane />}
               size="md"
-              text="Telegram"
+              text=""
             />
             <IconLink
               link={Contacts.INSTAGRAM}
               icon={<FaInstagram />}
               size="md"
-              text="Instagram"
+              text=""
             />
             <IconLink
               link={Contacts.B17}
               icon={<MdLibraryBooks />}
               size="md"
-              text="B17"
+              text=""
             />
           </div>
           <div className={styles.qrWrapper}>

@@ -5,6 +5,16 @@
   display: flex;
   align-items: center;
   gap: $spacing-medium;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+  background-color: $color-bg-opacity;
+  transition: $transition;
+  padding: $spacing-medium;
+
+  &:hover {
+    backdrop-filter: blur(0px);
+  }
 }
 
 .image {
@@ -15,12 +25,12 @@
   border-radius: 50%;
   overflow: hidden;
   background-color: $color-accent-primary;
-  
+
   img {
     padding-top: 30px;
     width: 100%;
     height: 100%;
-    object-fit:contain;
+    object-fit: contain;
     filter: drop-shadow(5px 5px 10px $color-bg-primary);
   }
 }
@@ -49,6 +59,15 @@
     gap: $spacing-medium;
     align-items: center;
   }
+}
+
+.flower {
+  position: absolute;
+  right: 120px;
+  bottom: 190px;
+  height: 450px;
+  filter: grayscale(100%);
+  transform: scaleX(-1);
 }
 
 @keyframes hiShake {
