@@ -6,6 +6,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { MdLibraryBooks } from 'react-icons/md';
 import qrCode from '../../../assets/images/qr/qr-code.png';
+import flower from '../../../assets/images/flowers/bg-flowers5.png';
 
 export const Footer = () => {
   return (
@@ -35,6 +36,7 @@ export const Footer = () => {
           <div className={styles.qrWrapper}>
             <img className={styles.qr} src={qrCode} alt="qrCode" />
           </div>
+          {/* <img src={flower} alt="flower" className={styles.flower} /> */}
         </div>
       </div>
     </footer>

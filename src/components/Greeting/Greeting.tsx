@@ -8,7 +8,6 @@ import { IconLink } from '../common/IconLink/IconLink';
 import { MdOutlineWavingHand } from 'react-icons/md';
 import flower from '../../assets/images/flowers/bg-flowers4.png';
 
-
 export const Greeting = () => {
   return (
     <div className={styles.outer}>

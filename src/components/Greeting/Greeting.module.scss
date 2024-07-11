@@ -1,5 +1,19 @@
 @import '../../styles/variables.scss';
 
+.outer {
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: 300px;
+  transform: scaleX(-1) rotate(-10deg);
+  filter: drop-shadow(0px 2px 2px $color-text-secondary) grayscale(100%);
+}
+
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -61,14 +75,6 @@
   }
 }
 
-.flower {
-  position: absolute;
-  right: 200px;
-  bottom: 300px;
-  height: 300px;
-  filter: grayscale(100%);
-  transform: scaleX(-1) rotate(-10deg);
-}
 
 @keyframes hiShake {
   0% {

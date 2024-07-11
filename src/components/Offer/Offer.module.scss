@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.outer {
+  position: relative;
+}
+
+.detail {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  z-index: 10;
+  height: 100px;
+  filter: drop-shadow(0px 2px 2px $color-text-secondary);
+}
