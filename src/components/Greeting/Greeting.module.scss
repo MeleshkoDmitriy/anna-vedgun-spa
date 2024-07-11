@@ -63,11 +63,11 @@
 
 .flower {
   position: absolute;
-  right: 120px;
-  bottom: 190px;
-  height: 450px;
+  right: 200px;
+  bottom: 300px;
+  height: 300px;
   filter: grayscale(100%);
-  transform: scaleX(-1);
+  transform: scaleX(-1) rotate(-10deg);
 }
 
 @keyframes hiShake {

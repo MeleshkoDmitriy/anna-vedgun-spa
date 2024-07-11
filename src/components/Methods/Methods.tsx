@@ -2,7 +2,7 @@ import styles from './Methods.module.scss';
 import '../../styles/global.scss';
 import { MdOutlinePsychology } from 'react-icons/md';
 import flower from '../../assets/images/flowers/bg-flowers2.png';
-
+import tape from '../../assets/images/details/tape.png';
 
 export const Methods = () => {
   return (
@@ -53,6 +53,7 @@ export const Methods = () => {
         </div>
       </section>
       <img className={styles.flower} src={flower} alt="flower" />
+      <img className={styles.tape} src={tape} alt="tape" />
     </div>
   );
 };

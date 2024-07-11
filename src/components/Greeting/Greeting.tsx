@@ -6,7 +6,7 @@ import { FaInstagram, FaTelegramPlane } from 'react-icons/fa';
 import { MdLibraryBooks } from 'react-icons/md';
 import { IconLink } from '../common/IconLink/IconLink';
 import { MdOutlineWavingHand } from 'react-icons/md';
-import flower from '../../assets/images/flowers/bg-flowers3.png';
+import flower from '../../assets/images/flowers/bg-flowers4.png';
 
 
 export const Greeting = () => {

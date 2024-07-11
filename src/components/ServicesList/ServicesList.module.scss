@@ -1,5 +1,9 @@
 @import '../../styles/variables.scss';
 
+.outer {
+  position: relative;
+}
+
 .wrapper {
   display: flex;
   width: 100%;
@@ -12,6 +16,7 @@
   background-color: $color-accent-primary;
   border-radius: $border-radius-medium;
   flex: 1 1 50%;
+  position: relative;
 
   .item {
     display: flex;
@@ -59,4 +64,14 @@
       text-shadow: 0 3px 3px #fff;
     }
   }
+}
+
+.tape {
+  width: 170px;
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  z-index: 20;
+  filter: grayscale(100%);
+  transform: rotate(-45deg);
 }

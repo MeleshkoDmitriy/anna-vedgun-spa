@@ -32,8 +32,7 @@
   font-size: $font-size-medium;
 }
 
-
-.blockGreen { 
+.blockGreen {
   width: 100%;
   padding: $spacing-medium;
   color: #fff;
@@ -44,7 +43,7 @@
   z-index: 10;
 }
 
-.blockGreenDouble { 
+.blockGreenDouble {
   width: 100%;
   color: #fff;
   background-color: transparent;
@@ -52,9 +51,33 @@
   font-size: $font-size-medium;
 }
 
+.gradient-one {
+  background-image: linear-gradient(
+    45deg,
+    $color-bg-opacity 0%,
+    $color-accent-primary 20%,
+  );
+}
+
+.gradient-two {
+  background-image: linear-gradient(
+    45deg,
+    $color-accent-primary 80%,
+    $color-bg-opacity 100%,
+  );
+}
+
+.gradient-three {
+  background-image: linear-gradient(
+    135deg,
+    $color-accent-primary 80%,
+    $color-bg-opacity 100%,
+  );
+}
+
 ::placeholder {
   font-family: sans-serif;
-} 
+}
 
 ::-webkit-scrollbar {
   width: 10px;
