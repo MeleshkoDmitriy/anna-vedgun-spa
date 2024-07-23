@@ -23,12 +23,7 @@ export const FormFeedback = ({ onClose }) => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      name: 'Анонимно',
-      text: '',
-    },
-  });
+  } = useForm({});
 
   const [postMessage] = usePostMessageMutation();
 
