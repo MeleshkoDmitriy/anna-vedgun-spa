@@ -1,0 +1,44 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  max-width: 300px;
+  width: 100%;
+  padding: $spacing-medium;
+  position: fixed;
+  z-index: 110;
+  bottom: 50px;
+  left: $spacing-medium;
+  background-color: #000;
+  border-radius: $border-radius-medium;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-200%);
+  transition: 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0%);
+}
+.success {
+  color: #fff;
+  background-color: $color-accent-primary;
+}
+.error {
+  color: #fff;
+  background-color: $color-error;
+}
+.content {
+  display: flex;
+  gap: $spacing-small;
+  align-items: flex-start;
+}
+.message {
+  font-size: $font-size-medium;
+}
+.icon {
+  position: relative;
+  top: -1px;
+  font-size: 30px;
+}

@@ -97,21 +97,6 @@
     max-height: 128px;
   }
 }
-
-.error,
-.empty {
-  display: inline-block;
-  color: $color-error;
-  font-size: $font-size-small;
-  position: relative;
-  top: -9px;
-}
-
-.empty {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .name,
 .text,
 .submit {
