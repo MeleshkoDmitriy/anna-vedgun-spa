@@ -1,0 +1,30 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+  width: 20px;
+  height: 20px;
+  background-color: $color-accent-secondary;
+  transition: $transition;
+
+  &:hover {
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .checkbox {
+      display: none;
+    }
+
+    .icon {
+      font-size: $font-size-title;
+      color: $color-accent-primary;
+    }
+  }
+}

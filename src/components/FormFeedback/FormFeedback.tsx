@@ -1,12 +1,13 @@
 import { useForm } from 'react-hook-form';
 import styles from './FormFeedback.module.scss';
 import { IoCloseOutline } from 'react-icons/io5';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { usePostMessageMutation } from '../../store/slice/api/apiSlice';
 import { TMessage } from '../../types/types';
 import { calcDate } from '../../utils/calcDate';
 import { useClickOutside } from '../../hooks/useClickOutside';
 import { Toast } from '../common/Toast/Toast';
+import { Checkbox } from '../common/Checkbox/Checkbox';
 
 type Message = Omit<TMessage, 'date'>;
 
@@ -43,7 +44,7 @@ export const FormFeedback = ({ onClose }) => {
     const newMessage: TMessage = {
       name: nameValue,
       text: textValue,
-      isAllowed: data.isAllowed,
+      isAllowed: isChecked,
       date: calcDate(),
     };
 
@@ -62,6 +63,8 @@ export const FormFeedback = ({ onClose }) => {
     setTimeout(() => {
       onClose();
       setButtonText('Отправить');
+      setMessage(null);
+      setType(null);
     }, 2000);
   };
 
@@ -71,13 +74,9 @@ export const FormFeedback = ({ onClose }) => {
     }
   };
 
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setMessage(null);
-      setType(null);
-    }, 2000);
-    return () => clearTimeout(timerId);
-  }, [message, type]);
+  const onCheckboxClick = useCallback(() => {
+    setIsChecked((prev) => !prev);
+  }, [isChecked]);
 
   return (
     <div className={styles.wrapper}>
@@ -104,9 +103,7 @@ export const FormFeedback = ({ onClose }) => {
           <div className={styles.actions}>
             <textarea
               className={styles.text}
-              {...register('text', {
-                required: 'Поле с отзывом является обязательным!',
-              })}
+              {...register('text')}
               placeholder="Ваш отзыв*"
             />
           </div>
@@ -119,13 +116,7 @@ export const FormFeedback = ({ onClose }) => {
             <span className={styles.confirmText}>
               Я разрешаю анонимную публикацию отзыва на этом сайте:
             </span>
-            <input
-              {...register('isAllowed')}
-              type="checkbox"
-              className={styles.checkbox}
-              checked={isChecked}
-              onChange={() => setIsChecked((prev) => !prev)}
-            />
+            <Checkbox isChecked={isChecked} onChange={onCheckboxClick} />
           </div>
         </form>
       </div>
