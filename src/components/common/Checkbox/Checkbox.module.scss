@@ -3,12 +3,19 @@
 .wrapper {
   width: 20px;
   height: 20px;
+  border-radius: $border-radius-small;
   background-color: $color-accent-secondary;
   transition: $transition;
 
   &:hover {
-    background-color: #fff;
+    background-color: $color-accent-primary;
     cursor: pointer;
+
+    .label {
+      .icon {
+        color: #fff;
+      }
+    }
   }
 
   .label {
@@ -23,6 +30,7 @@
     }
 
     .icon {
+      transition: $transition;
       font-size: $font-size-title;
       color: $color-accent-primary;
     }
