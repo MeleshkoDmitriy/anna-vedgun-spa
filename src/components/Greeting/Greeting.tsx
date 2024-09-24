@@ -7,14 +7,18 @@ import { MdLibraryBooks } from 'react-icons/md';
 import { IconLink } from '../common/IconLink/IconLink';
 import { MdOutlineWavingHand } from 'react-icons/md';
 import flower from '../../assets/images/flowers/bg-flowers4.png';
+import { SocialsBar } from '../SocialsBar/SocialsBar';
 
 export const Greeting = () => {
   return (
     <div className={styles.outer}>
       <section className="blockBlur" id="contacts">
         <div className={styles.wrapper}>
-          <div className={styles.image}>
-            <img src={image} alt="Анна Ведьгун" />
+          <div className={styles.side}>
+            <div className={styles.image}>
+              <img src={image} alt="Анна Ведьгун" />
+            </div>
+            <SocialsBar />
           </div>
           <div className={styles.body}>
             <h2 className={styles.title}>
@@ -28,7 +32,7 @@ export const Greeting = () => {
               использую когнитивно-поведенческую терапию и схема-терапию.
               Провожу индивидуальные сессии в онлайн и офлайн формате.
             </p>
-            <div className={styles.contacts}>
+            {/* <div className={styles.contacts}>
               <IconLink
                 link={Contacts.TELEGRAM}
                 icon={<FaTelegramPlane />}
@@ -47,7 +51,7 @@ export const Greeting = () => {
                 size="sm"
                 text="B17"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -24,6 +24,7 @@
 }
 
 .wrapper {
+  min-height: 400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -31,10 +32,9 @@
   padding: $spacing-medium;
   position: relative;
   z-index: 10;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(5px);
   background-color: $color-bg-opacity;
   transition: $transition;
-
 
   .methods {
     display: flex;
@@ -43,7 +43,6 @@
     width: 100%;
 
     .method {
-
       .definition {
         font-weight: bold;
         color: $color-accent-primary;
@@ -54,6 +53,43 @@
           top: 3px;
         }
       }
+    }
+  }
+}
+
+.tabs {
+  width: 100%;
+  display: flex;
+  gap: $spacing-small;
+
+  .tab {
+    background-color: #fff;
+    border-radius: $border-radius-medium;
+    border: 3px solid $color-accent-primary;
+    transition: $transition;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 0px $color-accent-primary;
+
+    &.active {
+      transform: translateY(0px);
+      box-shadow: 0 0px 0px $color-accent-primary;
+    }
+
+    & button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $color-accent-primary;
+      font-size: $font-size-large;
+      padding: $spacing-small $spacing-medium;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }

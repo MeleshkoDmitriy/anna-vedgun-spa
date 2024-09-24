@@ -62,18 +62,18 @@
 .right {
   right: 0;
 
-  &:hover {
-    .icon {
-      transform: scale(1.3);
-    }
-  }
+  // &:hover {
+  //   .icon {
+  //     transform: scale(1.3);
+  //   }
+  // }
   
-  &:active {
-    .icon {
-      transition: 0.05s;
-      transform: translateX(5px);
-    }
-  }
+  // &:active {
+  //   .icon {
+  //     transition: 0.05s;
+  //     transform: translateX(5px);
+  //   }
+  // }
 }
 
 

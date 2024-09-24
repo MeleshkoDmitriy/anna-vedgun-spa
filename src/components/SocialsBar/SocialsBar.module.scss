@@ -1,0 +1,34 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  position: absolute;
+  bottom: -10px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: $spacing-small;
+  border-radius: $border-radius-medium;
+  box-shadow: 0 3px 3px #cfcfcf;
+
+  .item {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    border-radius: $border-radius-small;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-accent-primary;
+      transform: translateY(-3px);
+      box-shadow: 0 3px 3px #cfcfcf;
+    }
+
+    &:hover > a {
+      transition: $transition;
+      color: #fff;
+    }
+  }
+}

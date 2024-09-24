@@ -44,7 +44,9 @@ export const AppNavLink: FC<LinkProps> = ({ link, onClick }: LinkProps) => {
         )}
       </NavLink>
       {path === '/blog' && length > 0 && (
-        <div className={styles.badge}>{length}</div>
+        <div className={styles.badge}>
+          <span className={styles.length}>{length}</span>
+        </div>
       )}
       {title === 'Главная' && (
         <div className={styles.dropdownWrapper}>

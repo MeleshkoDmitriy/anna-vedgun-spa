@@ -2,7 +2,7 @@ import styles from './DropdownMenu.module.scss';
 import { Paths } from '../../constants/Paths';
 
 import { useNavigate } from 'react-router-dom';
-import { Anchors } from '../../constants/Contacts';
+import { anchors } from '../../constants/Contacts';
 
 import { FaPhone } from "react-icons/fa6";
 import { BsPeopleFill } from 'react-icons/bs';
@@ -28,37 +28,37 @@ export const DropdownMenu = () => {
         <li onClick={() => handleLinkClick('contacts')}>
           <FaPhone className={styles.icon} />
           <a href="#contacts" className={styles.name}>
-            {Anchors.CONTACTS}
+            {anchors.CONTACTS}
           </a>
         </li>
         <li onClick={() => handleLinkClick('services')}>
           <BsPeopleFill className={styles.icon} />
           <a href="#services" className={styles.name}>
-            {Anchors.SERVICES}
+            {anchors.SERVICES}
           </a>
         </li>
         <li onClick={() => handleLinkClick('price')}>
           <IoWallet className={styles.icon} />
           <a href="#price" className={styles.name}>
-            {Anchors.PRICE}
+            {anchors.PRICE}
           </a>
         </li>
         <li onClick={() => handleLinkClick('education')}>
           <IoSchool className={styles.icon} />
           <a href="#education" className={styles.name}>
-            {Anchors.EDUCATION}
+            {anchors.EDUCATION}
           </a>
         </li>
         <li onClick={() => handleLinkClick('methods')}>
           <FaHandshakeSimple className={styles.icon} />
           <a href="#methods" className={styles.name}>
-            {Anchors.METHODS}
+            {anchors.METHODS}
           </a>
         </li>
         <li onClick={() => handleLinkClick('feedbacks')}>
           <MdFeedback className={styles.icon} />
           <a href="#feedbacks" className={styles.name}>
-            {Anchors.FEEDBACKS}
+            {anchors.FEEDBACKS}
           </a>
         </li>
       </ul>

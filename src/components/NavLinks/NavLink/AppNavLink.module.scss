@@ -53,8 +53,8 @@
 
 .badge {
   position: absolute;
-  bottom: 27px;
-  left: 62px;
+  bottom: 23px;
+  left: 59px;
   background-color: $color-accent-primary;
   width: 30px;
   height: 30px;
@@ -65,6 +65,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .length {
+    position: relative;
+    top: -0.5px;
+    cursor: pointer;
+  }
 }
 
 .iconWrapper {
