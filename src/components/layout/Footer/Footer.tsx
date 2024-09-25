@@ -1,4 +1,4 @@
-import { anchors, Contacts } from '../../../constants/Contacts';
+import { anchors, Contacts, Links } from '../../../constants/Contacts';
 import '../../../styles/global.scss';
 import { IconLink } from '../../common/IconLink/IconLink';
 import styles from './Footer.module.scss';
@@ -7,7 +7,7 @@ import { FaTelegramPlane } from 'react-icons/fa';
 import { MdLibraryBooks } from 'react-icons/md';
 import qrCode from '../../../assets/images/qr/qr-code.png';
 import { Paths } from '../../../constants/Paths';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 import { FaPhone } from 'react-icons/fa6';
 import { BsPeopleFill } from 'react-icons/bs';
@@ -15,6 +15,8 @@ import { IoWallet } from 'react-icons/io5';
 import { IoSchool } from 'react-icons/io5';
 import { FaHandshakeSimple } from 'react-icons/fa6';
 import { MdFeedback } from 'react-icons/md';
+import { IoNewspaper } from 'react-icons/io5';
+import { IoIosListBox } from "react-icons/io";
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -68,6 +70,18 @@ export const Footer = () => {
                 <a href="#feedbacks" className={styles.name}>
                   {anchors.FEEDBACKS}
                 </a>
+              </li>
+              <li>
+                <IoNewspaper className={styles.icon} />
+                <NavLink to={Links[1].path} className={styles.name}>
+                  {Links[1].title}
+                </NavLink>
+              </li>
+              <li>
+                <IoIosListBox className={styles.icon} />
+                <NavLink to={Links[2].path} className={styles.name}>
+                  {Links[2].title}
+                </NavLink>
               </li>
             </ul>
           </div>

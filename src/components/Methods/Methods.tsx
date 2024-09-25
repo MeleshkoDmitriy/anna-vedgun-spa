@@ -31,7 +31,7 @@ export const Methods = () => {
                 className={tabIndex === 1 ? styles.active : ''}
                 onClick={() => setTabIndex(1)}
               >
-                Схема
+                Схема-терапия
               </button>
             </div>
           </div>

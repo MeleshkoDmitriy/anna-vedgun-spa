@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   background-color: #fff;
-  padding: $spacing-small;
+  padding: 3px;
   border-radius: $border-radius-medium;
   box-shadow: 0 3px 3px #cfcfcf;
 
@@ -22,13 +22,16 @@
     &:hover {
       cursor: pointer;
       background-color: $color-accent-primary;
-      transform: translateY(-3px);
-      box-shadow: 0 3px 3px #cfcfcf;
     }
 
     &:hover > a {
       transition: $transition;
       color: #fff;
+    }
+
+    .icon {
+      position: relative;
+      top: 2px;
     }
   }
 }

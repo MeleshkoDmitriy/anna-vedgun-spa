@@ -84,8 +84,6 @@
   color: $color-accent-primary;
   font-size: $font-size-small;
   text-decoration: underline;
-  position: relative;
-  top: 0;
   font-weight: 100;
 
 
@@ -96,7 +94,6 @@
   }
 
   &:hover {
-    top: -3px;
     text-shadow: 0 3px 3px $color-accent-secondary;
   }
 }
