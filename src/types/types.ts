@@ -24,3 +24,7 @@ export type TMessage = {
   date: string;
   isAllowed: boolean;
 };
+
+export type TOwnerInfo = {
+  price: number;
+}

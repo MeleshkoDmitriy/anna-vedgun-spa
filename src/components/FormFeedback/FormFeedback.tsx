@@ -1,7 +1,7 @@
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import styles from './FormFeedback.module.scss';
 import { IoCloseOutline } from 'react-icons/io5';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { usePostMessageMutation } from '../../store/slice/api/apiSlice';
 import { TMessage } from '../../types/types';
 import { calcDate } from '../../utils/calcDate';
@@ -11,45 +11,44 @@ import { Checkbox } from '../common/Checkbox/Checkbox';
 
 type Message = Omit<TMessage, 'date'>;
 
-export const FormFeedback = ({ onClose }) => {
+interface FormFeedbackProps {
+  onClose: () => void;
+}
+
+export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
   const [isChecked, setIsChecked] = useState(true);
   const [buttonText, setButtonText] = useState('Отправить');
   const [message, setMessage] = useState<string | null>(null);
   const [type, setType] = useState<'success' | 'error' | null>(null);
 
   const formRef = useRef<HTMLDivElement>(null);
-  useClickOutside(formRef, () => {
-    onClose();
-  });
+  useClickOutside(formRef, onClose);
 
-  const { register, handleSubmit, reset } = useForm({});
+  const { register, handleSubmit, reset } = useForm<Message>({});
 
   const [postMessage] = usePostMessageMutation();
 
-  const onHandleSubmit = async (
-    data: Message,
-    e: React.FormEvent<HTMLFormElement>,
-  ) => {
-    e.preventDefault();
-
+  const onHandleSubmit: SubmitHandler<Message> = async (data, e) => {
+    e?.preventDefault();
+  
     const nameValue = data.name.trim() === '' ? 'Аноним' : data.name;
     const textValue = data.text.trim();
-
+  
     if (textValue === '') {
       setType('error');
       setMessage('Поле с отзывом является обязательным!');
       return;
     }
-
+  
     const newMessage: TMessage = {
       name: nameValue,
       text: textValue,
       isAllowed: isChecked,
       date: calcDate(),
     };
-
+  
     try {
-      await postMessage(newMessage).unwrap();
+      await postMessage(newMessage);
       setType('success');
       setMessage('Спасибо за ваш отзыв!');
       setButtonText('Отправлено!');
@@ -59,7 +58,7 @@ export const FormFeedback = ({ onClose }) => {
       setMessage('Что-то пошло не так..');
       console.error('Error sending message:', error);
     }
-
+  
     setTimeout(() => {
       onClose();
       setButtonText('Отправить');
@@ -67,7 +66,7 @@ export const FormFeedback = ({ onClose }) => {
       setType(null);
     }, 2000);
   };
-
+  
   const handleKeyPress = (e: React.KeyboardEvent<HTMLFormElement>) => {
     if (e.key === 'Enter') {
       handleSubmit(onHandleSubmit)(e);

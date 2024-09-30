@@ -9,7 +9,7 @@ interface PostProps {
   date: string;
   title: string;
   text: string;
-  url: string;
+  url?: string | undefined;
   onClick: () => void;
   isOpen: boolean;
 }
@@ -70,8 +70,8 @@ export const Post: FC<PostProps> = ({
       <div
         className={styles.collapse}
         style={
-          isOpen
-            ? { height: `${itemRef.current?.scrollHeight + 15}px` }
+          isOpen && itemRef.current
+            ? { height: `${itemRef.current.scrollHeight + 15}px` }
             : { height: '0px' }
         }
       >

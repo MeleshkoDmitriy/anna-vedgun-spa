@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Layout } from '../../components/layout/Layout/Layout';
-import styles from './BlogPage.module.scss';
+// import styles from './BlogPage.module.scss';
 import { useGetPostsQuery } from '../../store/slice/api/apiSlice';
 import { TPost } from '../../types/types';
 import { PostsList } from '../../components/PostsList/PostsList';

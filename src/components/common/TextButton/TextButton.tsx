@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, MouseEventHandler } from 'react';
 import styles from './TextButton.module.scss';
 import clsx from 'clsx';
 
@@ -6,7 +6,7 @@ interface TextButtonProps {
   color: 'light' | 'green';
   text: string;
   link?: string;
-  onClick?: (event: Event) => void;
+  onClick?:  MouseEventHandler<HTMLButtonElement>;
 }
 
 export const TextButton: FC<TextButtonProps> = ({ link, color, text, onClick }) => {

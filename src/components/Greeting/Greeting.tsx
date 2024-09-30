@@ -1,10 +1,6 @@
 import styles from './Greeting.module.scss';
 import '../.././styles/global.scss';
 import image from '../../assets/images/user/avatar.png';
-import { Contacts } from '../../constants/Contacts';
-import { FaInstagram, FaTelegramPlane } from 'react-icons/fa';
-import { MdLibraryBooks } from 'react-icons/md';
-import { IconLink } from '../common/IconLink/IconLink';
 import { MdOutlineWavingHand } from 'react-icons/md';
 import flower from '../../assets/images/flowers/bg-flowers4.png';
 import { SocialsBar } from '../SocialsBar/SocialsBar';
@@ -32,26 +28,6 @@ export const Greeting = () => {
               использую когнитивно-поведенческую терапию и схема-терапию.
               Провожу индивидуальные сессии в онлайн и офлайн формате.
             </p>
-            {/* <div className={styles.contacts}>
-              <IconLink
-                link={Contacts.TELEGRAM}
-                icon={<FaTelegramPlane />}
-                size="sm"
-                text="Telegram"
-              />
-              <IconLink
-                link={Contacts.INSTAGRAM}
-                icon={<FaInstagram />}
-                size="sm"
-                text="Instagram"
-              />
-              <IconLink
-                link={Contacts.B17}
-                icon={<MdLibraryBooks />}
-                size="sm"
-                text="B17"
-              />
-            </div> */}
           </div>
         </div>
       </section>

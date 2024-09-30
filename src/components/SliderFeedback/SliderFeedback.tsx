@@ -9,7 +9,7 @@ import { useGetFeedbacksQuery } from '../../store/slice/api/apiSlice';
 import { TFeedback } from '../../types/types';
 import { Feedback } from './Feedback/Feedback';
 import { TextButton } from '../common/TextButton/TextButton';
-import { Contacts } from '../../constants/Contacts';
+// import { Contacts } from '../../constants/Contacts';
 import { FormFeedback } from '../FormFeedback/FormFeedback';
 import ReactDOM from 'react-dom';
 
