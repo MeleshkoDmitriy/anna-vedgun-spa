@@ -32,36 +32,43 @@ export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
 
   const onHandleSubmit: SubmitHandler<Message> = async (data, e) => {
     e?.preventDefault();
-  
+
     const nameValue = data.name.trim() === '' ? 'Аноним' : data.name;
     const textValue = data.text.trim();
-  
+
     if (textValue === '') {
       setType('error');
       setMessage('Поле с отзывом является обязательным!');
       return;
     }
-  
+
     const newMessage: TMessage = {
       name: nameValue,
       text: textValue,
       isAllowed: isChecked,
       date: calcDate(),
     };
-  
+
     try {
       await postMessage(newMessage);
-      await axios.post(SERVER_URL, newMessage);
+
       setType('success');
       setMessage('Спасибо за ваш отзыв!');
       setButtonText('Отправлено!');
       reset();
+
+      try {
+        await axios.post(SERVER_URL, newMessage);
+      } catch (error) {
+        console.log(error);
+      }
+      
     } catch (error) {
       setType('error');
       setMessage('Что-то пошло не так..');
       console.error('Error sending message:', error);
     }
-  
+
     setTimeout(() => {
       onClose();
       setButtonText('Отправить');
@@ -69,7 +76,7 @@ export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
       setType(null);
     }, 2000);
   };
-  
+
   const handleKeyPress = (e: React.KeyboardEvent<HTMLFormElement>) => {
     if (e.key === 'Enter') {
       handleSubmit(onHandleSubmit)(e);
