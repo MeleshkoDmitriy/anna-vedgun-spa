@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  height: 100%;
+
+  .title {
+    font-size: 50px;
+    color: $color-accent-primary;
+    padding-top: $spacing-large;
+  }
+}

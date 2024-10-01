@@ -16,7 +16,7 @@ interface FormFeedbackProps {
 }
 
 export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const [buttonText, setButtonText] = useState('Отправить');
   const [message, setMessage] = useState<string | null>(null);
   const [type, setType] = useState<'success' | 'error' | null>(null);

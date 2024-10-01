@@ -8,6 +8,7 @@ import { BlogPage } from './pages/BlogPage/BlogPage';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import { OfferPage } from './pages/OfferPage/OfferPage';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
   },
   {
     path: Paths.NOTFOUND,
-    element: <h1>404</h1>,
+    element: <NotFoundPage />,
   },
 ]);
 

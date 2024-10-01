@@ -11,30 +11,30 @@ export const Methods = () => {
 
   return (
     <div className={styles.outer}>
+      <div className={styles.tabs}>
+        <div
+          className={clsx(styles.tab, {
+            [styles.active]: tabIndex === 0,
+          })}
+        >
+          <button onClick={() => setTabIndex(0)}>КПТ</button>
+        </div>
+        <div
+          className={clsx(styles.tab, {
+            [styles.active]: tabIndex === 1,
+          })}
+        >
+          <button
+            className={tabIndex === 1 ? styles.active : ''}
+            onClick={() => setTabIndex(1)}
+          >
+            Схема-терапия
+          </button>
+        </div>
+      </div>
       <section className="blockBlur" id="methods">
         <div className={styles.wrapper}>
           <h2>Методы</h2>
-          <div className={styles.tabs}>
-            <div
-              className={clsx(styles.tab, {
-                [styles.active]: tabIndex === 0,
-              })}
-            >
-              <button onClick={() => setTabIndex(0)}>КПТ</button>
-            </div>
-            <div
-              className={clsx(styles.tab, {
-                [styles.active]: tabIndex === 1,
-              })}
-            >
-              <button
-                className={tabIndex === 1 ? styles.active : ''}
-                onClick={() => setTabIndex(1)}
-              >
-                Схема-терапия
-              </button>
-            </div>
-          </div>
           <div className={styles.methods}>
             {tabIndex === 0 && (
               <div className={styles.method}>

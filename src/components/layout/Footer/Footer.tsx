@@ -32,8 +32,29 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.wrapper}>
+        <div className={styles.socials}>
+            <ul className={styles.list}>
+              <IconLink
+                link={Contacts.TELEGRAM}
+                icon={<FaTelegramPlane />}
+                size="sm"
+                text="Telegram"
+              />
+              <IconLink
+                link={Contacts.INSTAGRAM}
+                icon={<FaInstagram />}
+                size="sm"
+                text="Instagram"
+              />
+              <IconLink
+                link={Contacts.B17}
+                icon={<MdLibraryBooks />}
+                size="sm"
+                text="B17"
+              />
+            </ul>
+          </div>
           <div className={styles.menu}>
-            <h3 className={styles.title}>Меню</h3>
             <ul className={styles.list}>
               <li onClick={() => handleLinkClick('contacts')}>
                 <FaPhone className={styles.icon} />
@@ -83,29 +104,6 @@ export const Footer = () => {
                   {Links[2].title}
                 </NavLink>
               </li>
-            </ul>
-          </div>
-          <div className={styles.socials}>
-            <h3 className={styles.title}>Социальные сети</h3>
-            <ul className={styles.list}>
-              <IconLink
-                link={Contacts.TELEGRAM}
-                icon={<FaTelegramPlane />}
-                size="sm"
-                text="Telegram"
-              />
-              <IconLink
-                link={Contacts.INSTAGRAM}
-                icon={<FaInstagram />}
-                size="sm"
-                text="Instagram"
-              />
-              <IconLink
-                link={Contacts.B17}
-                icon={<MdLibraryBooks />}
-                size="sm"
-                text="B17"
-              />
             </ul>
           </div>
           <div className={styles.qrWrapper}>
