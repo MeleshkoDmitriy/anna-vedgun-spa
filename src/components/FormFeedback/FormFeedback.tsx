@@ -8,6 +8,8 @@ import { calcDate } from '../../utils/calcDate';
 import { useClickOutside } from '../../hooks/useClickOutside';
 import { Toast } from '../common/Toast/Toast';
 import { Checkbox } from '../common/Checkbox/Checkbox';
+import axios from 'axios';
+import { SERVER_URL } from '../../api/api';
 
 type Message = Omit<TMessage, 'date'>;
 
@@ -49,6 +51,7 @@ export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
   
     try {
       await postMessage(newMessage);
+      await axios.post(SERVER_URL, newMessage);
       setType('success');
       setMessage('Спасибо за ваш отзыв!');
       setButtonText('Отправлено!');

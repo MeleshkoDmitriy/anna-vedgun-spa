@@ -42,7 +42,7 @@ export const Methods = () => {
                   <span className={styles.definition}>
                     <MdOutlinePsychology className={styles.icon} />
                     Когнитивно-поведенческая терапия (КПТ)
-                  </span>{' '}
+                  </span>
                   — это психологический подход, основанный на идее, что мысли и
                   убеждения влияют на эмоциональное состояние человека.
                 </p>
@@ -66,7 +66,7 @@ export const Methods = () => {
                   <span className={styles.definition}>
                     <MdOutlinePsychology className={styles.icon} />
                     Схема-терапия
-                  </span>{' '}
+                  </span>
                   основана на принципах КПТ, но этот метод также включает в себя
                   избранные техники гештальт-терапии, психоанализа,
                   гуманистической терапии.
