@@ -58,7 +58,7 @@ export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
       reset();
 
       try {
-        await axios.post(SERVER_URL, newMessage);
+        await axios.post('http://localhost:5100', newMessage);
       } catch (error) {
         console.log(error);
       }
