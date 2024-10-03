@@ -60,7 +60,7 @@ export const FormFeedback: React.FC<FormFeedbackProps> = ({ onClose }) => {
       try {
         await axios.post(SERVER_URL, newMessage);
       } catch (error) {
-        console.log(error);
+        console.log('Server error');
       }
       
     } catch (error) {
