@@ -25,6 +25,7 @@
     justify-content: center;
     align-items: center;
     border: 1px solid $color-accent-primary;
+    border-radius: $border-radius-small;
 
     .checkbox {
       display: none;
@@ -34,6 +35,10 @@
       transition: $transition;
       font-size: $font-size-title;
       color: $color-accent-primary;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
